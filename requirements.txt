@@ -1,0 +1,68 @@
+# ==============================================================================
+#  Telco Customer Churn — Full Python Dependencies
+#  Project : Business Analytics Capstone
+#  Python  : 3.9+  (tested on Python 3.14)
+#
+#  Install all dependencies with:
+#      pip install -r requirements.txt
+#
+#  To reproduce the exact environment used during development:
+#      pip install -r requirements.txt --upgrade
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# DIRECT DEPENDENCIES
+# Libraries explicitly imported in telco_churn_analysis.py
+# ------------------------------------------------------------------------------
+
+# Data manipulation & analysis
+pandas>=1.5.0                  # DataFrames, CSV loading, groupby aggregations
+
+# Numerical computing
+numpy>=1.23.0                  # Array operations, numeric encoding
+
+# Data visualisation
+matplotlib>=3.6.0              # Chart generation (saved as PNG via Agg backend)
+seaborn>=0.12.0                # Statistical plot styling (built on matplotlib)
+
+# Machine learning — models, pipelines, metrics
+scikit-learn>=1.1.0            # LogisticRegression, RandomForestClassifier,
+                               # Pipeline, StandardScaler, train_test_split,
+                               # StratifiedKFold, cross_val_score,
+                               # accuracy_score, precision_score, recall_score,
+                               # f1_score, confusion_matrix, roc_curve, auc
+
+# ------------------------------------------------------------------------------
+# TRANSITIVE DEPENDENCIES
+# Installed automatically by the packages above; listed here for full
+# reproducibility and to document the complete dependency tree.
+# ------------------------------------------------------------------------------
+
+# --- pandas dependencies ---
+python-dateutil>=2.8.2         # Date/time parsing used internally by pandas
+tzdata>=2022.7                 # Timezone data for pandas datetime handling
+six>=1.5.0                     # python-dateutil dependency (py2/py3 compat)
+
+# --- matplotlib dependencies ---
+contourpy>=1.0.1               # Contour line computation for matplotlib plots
+cycler>=0.10.0                 # Composable cycles for matplotlib style props
+fonttools>=4.22.0              # Font file handling for matplotlib text rendering
+kiwisolver>=1.3.1              # Cassowary constraint solver for matplotlib layout
+packaging>=20.0                # Version parsing used by matplotlib internals
+pillow>=9.0.0                  # Image I/O used by matplotlib (PNG save)
+pyparsing>=3.0.0               # Expression parsing used by matplotlib
+
+# --- scikit-learn dependencies ---
+scipy>=1.3.2                   # Numerical routines used by sklearn algorithms
+joblib>=1.1.1                  # Parallel processing for RandomForestClassifier
+threadpoolctl>=3.1.0           # Thread pool management for sklearn parallelism
+narwhals>=2.0.1                # Dataframe interoperability layer for sklearn
+
+# --- joblib dependency ---
+cloudpickle>=3.0.0             # Serialisation of Python closures for joblib
+
+# ------------------------------------------------------------------------------
+# STANDARD LIBRARY MODULES USED (no install needed — included with Python)
+# ------------------------------------------------------------------------------
+# sys          — stdout reconfiguration for UTF-8 output on Windows
+# warnings     — suppress sklearn/matplotlib deprecation warnings
